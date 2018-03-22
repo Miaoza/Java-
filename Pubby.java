@@ -2,12 +2,23 @@
 * @Author: nianko
 * @Date:   2018-03-20 14:34:41
 * @Last Modified by:   nianko
-* @Last Modified time: 2018-03-20 14:49:55
+* @Last Modified time: 2018-03-22 17:30:24
 */
 
 //一个源文件中只能有一个public类
 //一个源文件可以有多个非public类
 //源文件的名称应该和public类的类名保持一致
+
+class Dog extends Animal{
+    public Dog(int mid, String mname){
+        super(mid, mname);
+        System.out.println("小狗:");
+    }
+
+    public void saying(){
+        System.out.println("白白正在汪汪汪");
+    }
+}
 
 public class Pubby{
     int pubbyAge;
@@ -35,5 +46,11 @@ public class Pubby{
         myPubby.getAge();
         /*你也可以像下面这样访问成员变量 */
         System.out.println("变量值 : " + myPubby.pubbyAge );
+
+        //Animal dog = new Dog(3, "白白"); error:Animal没有 saying 方法
+        Dog dog = new Dog(3, "白白");
+        dog.eat();
+        dog.saying();
     }
 }
+
