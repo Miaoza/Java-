@@ -11,7 +11,7 @@ public class HelloWord{ //类 HelloWord 是公共的, 应在名为 HelloWord.jav
     public static void main(String[] args){
         System.out.println("Hello Word !");
         Demo demo = new Demo();
-        demo.main(null);
+        demo.main(null);//必须传参
     }
 
     public static void test(){
