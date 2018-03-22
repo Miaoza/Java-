@@ -2,7 +2,7 @@
 * @Author: nianko
 * @Date:   2018-03-20 14:06:04
 * @Last Modified by:   nianko
-* @Last Modified time: 2018-03-20 15:34:04
+* @Last Modified time: 2018-03-22 18:12:52
 */
 public class HelloWord{ //类 HelloWord 是公共的, 应在名为 HelloWord.java 的文件中声明
     //main 是一个程序的入口，一个 java 程序运行必须而且有且仅有一个 main 方法
@@ -10,7 +10,15 @@ public class HelloWord{ //类 HelloWord 是公共的, 应在名为 HelloWord.jav
     //Java 程序的 main() 方法必须设置成公有的，否则，Java 解释器将不能运行该类
     public static void main(String[] args){
         System.out.println("Hello Word !");
+        Demo demo = new Demo();
+        demo.main(null);
     }
+
+    public static void test(){
+        System.out.println("This is a test");
+    }
+
+    public String name = "nianko";
 }
 //$ javac HelloWorld.java
 //$ java HelloWorld
