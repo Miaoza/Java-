@@ -2,7 +2,7 @@
 * @Author: nianko
 * @Date:   2018-03-20 16:18:55
 * @Last Modified by:   nianko
-* @Last Modified time: 2018-03-21 17:44:20
+* @Last Modified time: 2018-03-26 17:39:34
 */
 
 import java.util.Scanner;
@@ -54,10 +54,16 @@ public class Test{
         penguin.eat();
         penguin.sleep();
         penguin.introme();
-        penguin.niaolei();
+        //penguin.niaolei();   //error
         Animal mouse = new Mouse(2, "Jerry");
         mouse.eat();
         mouse.sleep();
         mouse.introme();
+
+        Penguin penguin2 = new Penguin(3, "Wudi");
+        penguin2.eat();
+        penguin2.sleep();
+        penguin2.introme();
+        penguin2.niaolei();  //success
     }
 }
