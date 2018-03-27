@@ -2,7 +2,7 @@
 * @Author: nianko
 * @Date:   2018-03-27 15:24:00
 * @Last Modified by:   nianko
-* @Last Modified time: 2018-03-27 16:22:15
+* @Last Modified time: 2018-03-27 16:34:58
 */
 
 // java集合框架位于java.util包中
@@ -63,9 +63,31 @@ public class DataStructure{
 
         System.out.println("\n字符串型数组元素为:");
         printArray( strArray ); // 传递一个字符串型数组
-    }
-}
+    
+        List<String> name = new ArrayList<String>();
+        List<Integer> age = new ArrayList<Integer>();
+        List<Number> number = new ArrayList<Number>();
 
+        name.add("icon");
+        name.add("avatar");
+        age.add(18);
+        age.add(26);
+        number.add(314);
+
+        getData(name);
+        getData(age);
+        getData(number);
+    }
+
+    // 类型通配符一般是使用?代替具体的类型参数。
+    // 例如 List<?> 在逻辑上是List<String>,List<Integer> 等所有List<具体类型实参>的父类
+    public static void getData(List<?> data) {
+        System.out.println("data :" + data.get(0));
+    }
+    // <? extends T>和<? super T>的区别
+    // <? extends T>表示该通配符所代表的类型是T类型的子类。
+    // <? super T>表示该通配符所代表的类型是T类型的父类。
+}
 
 // 装箱就是把值类型打包到Object引用类型的一个实例中
 // 拆箱就是指从对象中提取值类型
