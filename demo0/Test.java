@@ -2,7 +2,7 @@
 * @Author: nianko
 * @Date:   2018-03-26 18:10:06
 * @Last Modified by:   nianko
-* @Last Modified time: 2018-03-27 11:40:42
+* @Last Modified time: 2018-03-27 12:15:23
 */
 
 // 多态
@@ -18,18 +18,28 @@ class Animal{
     }
 
     public void Shout(){
-        System.out.println("");
+        System.out.println("大家好，我叫"+name+"，"+GetShout());
+    }
+
+    protected String GetShout(){
+        return "";
     }
 }
+
+//设计模式--模板方法
 
 class Cat extends Animal{
     public Cat(String name){
         super(name);
     }
 
-    public void Shout(){
-        System.out.println("大家好，我叫"+name+"，我是小猫猫，喵喵喵");
+    public String GetShout(){
+        return "我是小猫猫，喵喵喵";
     }
+
+    // public void Shout(){
+    //     System.out.println("大家好，我叫"+name+"，我是小猫猫，喵喵喵");
+    // }
 }
 
 class Dog extends Animal{
@@ -37,8 +47,22 @@ class Dog extends Animal{
         super(name);
     }
 
-    public void Shout(){
-        System.out.println("大家好，我叫"+name+"，我是小狗狗，汪汪汪");
+    public String GetShout(){
+        return "我是小狗狗，汪汪汪";
+    }
+
+    // public void Shout(){
+    //     System.out.println("大家好，我叫"+name+"，我是小狗狗，汪汪汪");
+    // }
+}
+
+class Sheep extends Animal{
+    public Sheep(String name){
+        super(name);
+    }
+
+    public String GetShout(){
+        return "我是老羊羔，咩咩咩";
     }
 }
 
@@ -50,6 +74,7 @@ public class Test{
         new Cat("喵咂"),
         new Cat("酱肉"),
         new Cat("黑米"),
+        new Sheep("唐老鸭"),
     };
 
     public static void main(String[] args){
